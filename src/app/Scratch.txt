@@ -1,0 +1,33 @@
+<simple-record-tiles>
+  <!-- Default ng-content -->
+<div>The List Bla bla bla</div>
+
+<!-- The Template -->
+<ng-template singleRecordEditorContent>
+SingleRecordEditor Fields here
+</ng-template>
+</simple-record-tiles>
+
+
+
+<table>
+  <tr>
+     <th> List </th> <th> Record Editor</th>
+  </tr>
+  <tr>
+    <td><ng-content></ng-content></td>
+    <td>
+<div *ngIf="true" [id]="contentId">
+  The Editor:
+    <ng-container [ngTemplateOutlet]="content.templateRef">{{contentId}}</ng-container>
+</div>
+    </td>
+  </tr>
+<table>
+
+
+<simple-record-tiles>
+<ng-template singleRecordEditorContent>
+It depends on what you do with it.
+</ng-template>
+</simple-record-tiles>

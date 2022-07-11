@@ -1,0 +1,15 @@
+<table border="1">
+    <tr>
+        <th> List </th> <th> Record Editor</th>
+    </tr>
+    <tr>
+        <td><ng-content></ng-content></td>
+        <td>
+            <div *ngIf="expanded" [id]="contentId">
+                The Editor:
+                <ng-container [ngTemplateOutlet]="content.templateRef"
+                    [ngTemplateOutletContext]="{$implicit: contentId}"></ng-container>
+            </div>
+        </td>
+    </tr>
+    <table>
