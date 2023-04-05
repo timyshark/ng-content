@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
-  selector: 'app-demo-template',
+  selector: 'demo-ng-template',
   template: `
   <!-- Define a template -->
   <ng-template #myTemplate >
@@ -17,16 +17,16 @@ import { Component, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@an
     `
   
 })
-export class DemoTemplateComponent implements OnInit {
+export class NgTemplateComponent implements OnInit {
   // Define these selectors as local variables 
-  @ViewChild('placeHolderRef', { read: ViewContainerRef, static: true }) myPlaceHolderRef!: ViewContainerRef;
-  @ViewChild('myTemplate', { read: TemplateRef, static: true }) myTemplate1!: TemplateRef<any>;
+  @ViewChild('placeHolderRef', { read: ViewContainerRef, static: true }) myPlaceHolderRef!: ViewContainerRef; //get the <div> that containes the #placeHolderRef ->as variable myPlaceHolderRef
+  @ViewChild('myTemplate', { read: TemplateRef, static: true }) myTemplateVar!: TemplateRef<any>; //get the <ng-template> named #myTemplate as myTEmplateVar
 
   ngOnInit() {
     // Renders the tmplate myTemplate, otherwise will display ding ding ding
     // usage, render on demand in the placeholder 'myTemplateRef' the template 'myTemplate', with if conditions
     // for performance performance key
-    this.myPlaceHolderRef.createEmbeddedView(this.myTemplate1); //<- this will render "List of items" after "Ding Ding Ding"
+    this.myPlaceHolderRef.createEmbeddedView(this.myTemplateVar); //<- this will render "List of items"(myTemplateVar) after "Ding Ding Ding"(myPlaceHolderRef)
 
 
   }

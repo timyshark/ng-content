@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DemoTemplateComponent } from './demo-template/demo-template.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
-import { SimpleRecordManagerComponent } from './simple-record-manager/simple-record-manager.component';
-import { TemplateOutletUserComponent } from './template-outlet/template-outlet-user.component';
 
-import { Test1DashboardComponent } from './test1-dashboard/test1-dashboard.component';
-import { ZippyDashboardComponent } from './zippy-dashboard/zippy-dashboard.component';
+import { TemplateOutletUserComponent } from './template-outlet/template-outlet.component';
+
+import { Test1DashboardComponent } from './zippy-examples/test1-dashboard/test1-dashboard.component';
+import { NgContentDashboardComponent } from './zippy-dashboard/ng-content-dashboard.component';
+import { ContentContainerComponent } from './content-cotainer/component/scontent-container.component';
 
 const appRoutes: Routes = [
-  {  path: '', component: ZippyDashboardComponent,},
-  {  path: 'manager', component: SimpleRecordManagerComponent, },
-  {  path: 'template',  component: DemoTemplateComponent, },
+  {  path: '', component: NgContentDashboardComponent,},
+  {  path: 'content-container', component: ContentContainerComponent, },
+  {  path: 'ng-template',  component: NgTemplateComponent, },
   {  path: 'template-outlet',  component: TemplateOutletUserComponent, },
   {  path: 'test1',  component: Test1DashboardComponent, },
   { path: '**', component: PageNotFoundComponent }

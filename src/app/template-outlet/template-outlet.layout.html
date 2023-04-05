@@ -1,0 +1,25 @@
+<table border="1">
+    <tr>
+        <th> List </th> <th> Value</th>
+    </tr>
+    <tr>
+        <td><ng-content></ng-content></td>
+        <td>
+            <div *ngIf="expanded" >
+                The Editor:
+                <!-- Implicit, variable and label are the same hostvariable in this case, hostvarible name is layoutvar, should use let-layoutvar-->
+                <!-- <ng-container [ngTemplateOutlet]="content.templateRef"
+                    [ngTemplateOutletContext]="{$implicit: layoutvar}"></ng-container> -->
+                
+                    <!-- if use direct assignement then caller can't submit any new values but you can use it with let-<any-var-name> -->
+               <ng-container [ngTemplateOutlet]="content.templateRef"
+                    [ngTemplateOutletContext]="{$implicit: {id:'01',name:'Toyota',age:99}}"></ng-container>
+
+                    <!-- EXPLICIT OPTION, variable uses label to the caller to use let-localvar="myvar" 
+                         in this case hostvariable is layoutvar, should use let-myvar -->
+                    <!-- <ng-container [ngTemplateOutlet]="content.templateRef"
+                    [ngTemplateOutletContext]="{myvar: layoutvar}"></ng-container> -->
+            </div>
+        </td>
+    </tr>
+<table>

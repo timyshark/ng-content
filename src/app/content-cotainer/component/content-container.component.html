@@ -1,0 +1,15 @@
+<h1>simple-record-manager works!</h1>
+<content-container-layout>
+  <!-- Placed in ng-content in the layout-->
+  <ul>list of items
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+  </ul>
+  <!-- placed in the ng-container in the layout -->
+  <ng-template contentContainer let-contentId>
+    {{contentId}}
+  </ng-template>
+</content-container-layout>
+
