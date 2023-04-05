@@ -25,6 +25,4 @@ export class TemplateOutletLayout {
   age = 18;
   @ContentChild(MyTemplateDirective) content!: MyTemplateDirective;
   constructor() { }
-
-
 }
