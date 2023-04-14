@@ -7,7 +7,7 @@ let nextId = 0;
   selector: '[contentContainer]'
 })
 export class ContentContainerDirective {
-  constructor(public templateRef: TemplateRef<unknown>) {}
+  constructor(public templateRef: TemplateRef<unknown>) {console.log('constructed')}
 }
 
 @Component({

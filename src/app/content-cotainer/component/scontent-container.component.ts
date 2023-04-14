@@ -4,11 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'content-contianer',
   templateUrl: './content-container.component.html'
 })
-export class ContentContainerComponent implements OnInit {
+export class ContentContainerComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -2,20 +2,7 @@ import { Component, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@an
 
 @Component({
   selector: 'demo-ng-template',
-  template: `
-  <!-- Define a template -->
-  <ng-template #myTemplate >
-    <ul>
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-    </ul>
-  </ng-template>
-
-  <!-- use the Template this is the placeholder of where the template should be rendered,
-  you must use createEmbeddedView() to render it-->
-  <div #placeHolderRef >Ding ding ding</div>
-    `
-  
+  templateUrl : './ng-template.component.html'
 })
 export class NgTemplateComponent implements OnInit {
   // Define these selectors as local variables 

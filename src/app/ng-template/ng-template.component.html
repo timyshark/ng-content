@@ -1,0 +1,12 @@
+
+  <!-- Define a template -->
+  <ng-template #myTemplate >
+    it was false
+   Bla bla bla
+  </ng-template>
+
+  <!-- use the Template this is the placeholder of where the template should be rendered,
+  you must use createEmbeddedView() to render it-->
+  <div #placeHolderRef >Ding ding ding</div>
+    
+  <div *ngIf="true;else myTemplate">Thats true , Bingo!</div>
